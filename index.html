@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bay Area Leak Detection | Water Leak Detection & Moisture Inspection</title>
+  <meta name="description" content="Water leak detection and moisture inspection in the San Francisco Bay Area. Call or send a request online." />
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#111a31;
+      --text:#eef3ff;
+      --muted:#b9c4e6;
+      --border:rgba(255,255,255,.14);
+      --shadow: 0 18px 70px rgba(0,0,0,.38);
+      --accent1:#4da3ff;
+      --accent2:#42d392;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:
+        radial-gradient(900px 500px at 18% 0%, rgba(77,163,255,.20), transparent 60%),
+        radial-gradient(900px 500px at 82% 10%, rgba(66,211,146,.18), transparent 60%),
+        var(--bg);
+      color:var(--text);
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1100px;margin:0 auto;padding:22px}
+    header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.72);
+      border-bottom:1px solid var(--border);
+    }
+    .topbar{
+      display:flex;align-items:center;justify-content:space-between;gap:14px;
+      padding:14px 0;
+    }
+    .brand{display:flex;align-items:center;gap:10px;font-weight:850;letter-spacing:.2px}
+    .logo{
+      width:38px;height:38px;border-radius:12px;
+      background:linear-gradient(135deg,var(--accent1),var(--accent2));
+      box-shadow:0 14px 40px rgba(77,163,255,.18);
+    }
+    nav{display:flex;gap:10px;flex-wrap:wrap}
+    nav a{
+      color:var(--muted);
+      padding:10px 12px;border-radius:12px;
+    }
+    nav a:hover{background:rgba(255,255,255,.06);color:var(--text)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 16px;border-radius:14px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      font-weight:750;
+      cursor:pointer;
+      user-select:none;
+    }
+    .btn.primary{
+      border:none;color:#071221;
+      background:linear-gradient(135deg, rgba(77,163,255,.95), rgba(66,211,146,.92));
+      box-shadow:0 16px 50px rgba(77,163,255,.18);
+    }
+    .hero{padding:30px 0 10px;}
+    .grid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:16px;
+      align-items:start;
+    }
+    @media (max-width: 940px){
+      .grid{grid-template-columns:1fr}
+      nav{display:none}
+    }
+    h1{margin:6px 0 10px;font-size:44px;line-height:1.06}
+    @media (max-width:520px){h1{font-size:36px}}
+    .sub{margin:0;color:var(--muted);line-height:1.65;font-size:16px}
+    .pillrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+    .pill{
+      padding:10px 12px;border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:16px;
+      box-shadow:var(--shadow);
+    }
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .kpis{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      margin-top:14px;
+    }
+    @media (max-width:900px){.kpis{grid-template-columns:1fr}}
+    .kpi b{display:block;font-size:18px;margin-bottom:6px}
+    .kpi span{color:var(--muted);line-height:1.5}
+    section{padding:16px 0}
+    h2{margin:0 0 10px;font-size:22px}
+    .muted{color:var(--muted);line-height:1.65;margin:0}
+    .services{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      margin-top:12px;
+    }
+    @media (max-width:900px){.services{grid-template-columns:1fr}}
+    .svc h3{margin:0 0 8px}
+    .svc p{margin:0;color:var(--muted);line-height:1.65}
+    .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    @media (max-width:700px){.row2{grid-template-columns:1fr}}
+    label{display:block;font-size:13px;color:var(--muted);margin:10px 0 6px}
+    input, textarea{
+      width:100%;
+      padding:12px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:rgba(0,0,0,.18);
+      color:var(--text);
+      outline:none;
+    }
+    textarea{min-height:110px;resize:vertical}
+    .small{font-size:12px;color:var(--muted)}
+    .divider{height:1px;background:var(--border);margin:12px 0}
+    .two{
+      display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;
+    }
+    @media (max-width:900px){.two{grid-template-columns:1fr}}
+    .faq details{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+      border-radius:14px;
+      padding:12px 14px;
+      margin-top:10px;
+    }
+    .faq summary{cursor:pointer;font-weight:750}
+    .faq p{margin:10px 0 0;color:var(--muted);line-height:1.65}
+    footer{padding:26px 0 40px;color:var(--muted);font-size:13px}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wrap topbar">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <div>Bay Area Leak Detection</div>
+    </div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#areas">Service Area</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn primary" href="#contact">Book</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="grid">
+      <div>
+        <h1>Water Leak Detection & Moisture Inspection</h1>
+        <p class="sub">
+          Serving the <b>San Francisco Bay Area</b>. We provide moisture readings, photo documentation,
+          and a clear summary to help identify likely leak sources and next steps.
+        </p>
+
+        <div class="actions">
+          <a class="btn primary" href="tel:+14424000467">Call (442) 400-0467</a>
+          <a class="btn" href="sms:14424000467?&body=Hi!%20I%20need%20leak%20detection%20in%20the%20Bay%20Area.%20My%20address%20is%3A%20">Text (SMS)</a>
+        </div>
+
+        <div class="pillrow">
+          <span class="pill">Moisture readings</span>
+          <span class="pill">Photo documentation</span>
+          <span class="pill">Fast scheduling</span>
+          <span class="pill">Bay Area</span>
+        </div>
+
+        <div class="kpis">
+          <div class="card kpi">
+            <b>Same-day / Next-day</b>
+            <span>When available. Quick call/text to confirm.</span>
+          </div>
+          <div class="card kpi">
+            <b>Clear documentation</b>
+            <span>Readings + photos + notes for landlord/insurance.</span>
+          </div>
+          <div class="card kpi">
+            <b>Practical next steps</b>
+            <span>Repair vs dry-out vs further testing guidance.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="contact">
+        <h2 style="margin:0 0 8px">Quick Request</h2>
+        <p class="muted">Fill out the form → it opens an email draft to send.</p>
+
+        <form id="quickForm">
+          <div class="row2">
+            <div>
+              <label>Name</label>
+              <input name="name" placeholder="Alex" required />
+            </div>
+            <div>
+              <label>Your phone</label>
+              <input name="phone" placeholder="(###) ###-####" required />
+            </div>
+          </div>
+
+          <label>Property address (city is OK)</label>
+          <input name="address" placeholder="Santa Clara, CA" required />
+
+          <label>What’s going on?</label>
+          <textarea name="details" placeholder="Wet spot, ceiling stain, odor, mold concern, high water bill, etc."></textarea>
+
+          <button class="btn primary" style="width:100%;margin-top:10px" type="submit">Send Request</button>
+
+          <div class="divider"></div>
+          <div class="small">
+            Email goes to: <b>alex@alxleak.com</b><br/>
+            Or call/text: <b>(442) 400-0467</b>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <p class="muted">Common leak and moisture inspection requests we handle:</p>
+
+    <div class="services">
+      <div class="card svc">
+        <h3>Leak Source Investigation</h3>
+        <p>Kitchen/bath, fixtures, supply & drain lines, windows, roof intrusion, HVAC condensate, and more.</p>
+      </div>
+      <div class="card svc">
+        <h3>Moisture Mapping</h3>
+        <p>Moisture readings and affected-area mapping to understand spread and severity.</p>
+      </div>
+      <div class="card svc">
+        <h3>Documentation & Report</h3>
+        <p>Photos + readings + a simple summary for landlords, property managers, or insurance documentation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="two">
+      <div class="card">
+        <h2>Pricing (example)</h2>
+        <p class="muted">
+          Inspection + moisture readings + documentation: <b>$250</b>.<br/>
+          If we perform the dry-out / remediation work, the inspection fee can be credited toward the project.
+        </p>
+        <div class="divider"></div>
+        <p class="small">You can change this anytime (starting at $___, travel fee, etc.).</p>
+      </div>
+
+      <div class="card">
+        <h2>What you get</h2>
+        <p class="muted" style="margin-bottom:10px">
+          • Moisture readings (walls/floors/ceilings)<br/>
+          • Photos & notes<br/>
+          • Clear summary + recommendations
+        </p>
+        <a class="btn primary" href="#contact">Send a Request</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="areas">
+    <div class="card">
+      <h2>Service Area</h2>
+      <p class="muted">
+        San Francisco Bay Area — including <b>Santa Clara</b>, <b>San Jose</b>, <b>Sunnyvale</b>, <b>Mountain View</b>,
+        <b>Cupertino</b>, <b>Milpitas</b>, <b>Palo Alto</b>, and nearby cities.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="two">
+      <div class="card">
+        <h2>Reviews</h2>
+        <p class="muted">
+          “Quick response, clear report and photos.”<br/>
+          “Found the likely source fast and explained next steps.”<br/>
+          “Professional moisture readings and documentation.”
+        </p>
+        <div class="divider"></div>
+        <p class="small">Later you can replace these with real Google/Yelp reviews.</p>
+      </div>
+
+      <div class="card faq" id="faq">
+        <h2>FAQ</h2>
+
+        <details>
+          <summary>Do you repair plumbing leaks?</summary>
+          <p>We focus on leak detection and moisture documentation. If needed, we can recommend next steps (repair vs dry-out).</p>
+        </details>
+
+        <details>
+          <summary>Can I use this for my landlord or insurance?</summary>
+          <p>Yes. We provide moisture readings and photo documentation with a clear summary.</p>
+        </details>
+
+        <details>
+          <summary>How fast can you come out?</summary>
+          <p>Often same-day or next-day depending on schedule and location. Call/text for availability.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer>© <span id="year"></span> Bay Area Leak Detection · (442) 400-0467</footer>
+</main>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Quick Request -> opens email draft
+  document.getElementById("quickForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const fd = new FormData(e.target);
+
+    const name = (fd.get("name") || "").toString().trim();
+    const phone = (fd.get("phone") || "").toString().trim();
+    const address = (fd.get("address") || "").toString().trim();
+    const details = (fd.get("details") || "").toString().trim();
+
+    const subject = encodeURIComponent("Leak Detection Request — " + address);
+    const body = encodeURIComponent(
+`Name: ${name}
+Phone: ${phone}
+Address: ${address}
+
+Details:
+${details || "-"}
+`
+    );
+
+    const mailto = "mailto:alex@alxleak.com?subject=" + subject + "&body=" + body;
+    window.location.href = mailto;
+  });
+</script>
+
+</body>
+</html>
