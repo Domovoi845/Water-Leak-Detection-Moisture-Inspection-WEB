@@ -2,364 +2,466 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bay Area Leak Detection | Water Leak Detection & Moisture Inspection</title>
-  <meta name="description" content="Water leak detection and moisture inspection in the San Francisco Bay Area. Call or send a request online." />
-  <style>
-    :root{
-      --bg:#0b1220;
-      --card:#111a31;
-      --text:#eef3ff;
-      --muted:#b9c4e6;
-      --border:rgba(255,255,255,.14);
-      --shadow: 0 18px 70px rgba(0,0,0,.38);
-      --accent1:#4da3ff;
-      --accent2:#42d392;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      background:
-        radial-gradient(900px 500px at 18% 0%, rgba(77,163,255,.20), transparent 60%),
-        radial-gradient(900px 500px at 82% 10%, rgba(66,211,146,.18), transparent 60%),
-        var(--bg);
-      color:var(--text);
-    }
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:1100px;margin:0 auto;padding:22px}
-    header{
-      position:sticky;top:0;z-index:50;
-      backdrop-filter: blur(10px);
-      background: rgba(11,18,32,.72);
-      border-bottom:1px solid var(--border);
-    }
-    .topbar{
-      display:flex;align-items:center;justify-content:space-between;gap:14px;
-      padding:14px 0;
-    }
-    .brand{display:flex;align-items:center;gap:10px;font-weight:850;letter-spacing:.2px}
-    .logo{
-      width:38px;height:38px;border-radius:12px;
-      background:linear-gradient(135deg,var(--accent1),var(--accent2));
-      box-shadow:0 14px 40px rgba(77,163,255,.18);
-    }
-    nav{display:flex;gap:10px;flex-wrap:wrap}
-    nav a{
-      color:var(--muted);
-      padding:10px 12px;border-radius:12px;
-    }
-    nav a:hover{background:rgba(255,255,255,.06);color:var(--text)}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:12px 16px;border-radius:14px;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.06);
-      color:var(--text);
-      font-weight:750;
-      cursor:pointer;
-      user-select:none;
-    }
-    .btn.primary{
-      border:none;color:#071221;
-      background:linear-gradient(135deg, rgba(77,163,255,.95), rgba(66,211,146,.92));
-      box-shadow:0 16px 50px rgba(77,163,255,.18);
-    }
-    .hero{padding:30px 0 10px;}
-    .grid{
-      display:grid;
-      grid-template-columns: 1.25fr .75fr;
-      gap:16px;
-      align-items:start;
-    }
-    @media (max-width: 940px){
-      .grid{grid-template-columns:1fr}
-      nav{display:none}
-    }
-    h1{margin:6px 0 10px;font-size:44px;line-height:1.06}
-    @media (max-width:520px){h1{font-size:36px}}
-    .sub{margin:0;color:var(--muted);line-height:1.65;font-size:16px}
-    .pillrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
-    .pill{
-      padding:10px 12px;border-radius:999px;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.04);
-      color:var(--muted);
-      font-size:13px;
-    }
-    .card{
-      background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
-      border:1px solid var(--border);
-      border-radius:18px;
-      padding:16px;
-      box-shadow:var(--shadow);
-    }
-    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
-    .kpis{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:12px;
-      margin-top:14px;
-    }
-    @media (max-width:900px){.kpis{grid-template-columns:1fr}}
-    .kpi b{display:block;font-size:18px;margin-bottom:6px}
-    .kpi span{color:var(--muted);line-height:1.5}
-    section{padding:16px 0}
-    h2{margin:0 0 10px;font-size:22px}
-    .muted{color:var(--muted);line-height:1.65;margin:0}
-    .services{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:12px;
-      margin-top:12px;
-    }
-    @media (max-width:900px){.services{grid-template-columns:1fr}}
-    .svc h3{margin:0 0 8px}
-    .svc p{margin:0;color:var(--muted);line-height:1.65}
-    .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-    @media (max-width:700px){.row2{grid-template-columns:1fr}}
-    label{display:block;font-size:13px;color:var(--muted);margin:10px 0 6px}
-    input, textarea{
-      width:100%;
-      padding:12px;
-      border-radius:14px;
-      border:1px solid var(--border);
-      background:rgba(0,0,0,.18);
-      color:var(--text);
-      outline:none;
-    }
-    textarea{min-height:110px;resize:vertical}
-    .small{font-size:12px;color:var(--muted)}
-    .divider{height:1px;background:var(--border);margin:12px 0}
-    .two{
-      display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;
-    }
-    @media (max-width:900px){.two{grid-template-columns:1fr}}
-    .faq details{
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.04);
-      border-radius:14px;
-      padding:12px 14px;
-      margin-top:10px;
-    }
-    .faq summary{cursor:pointer;font-weight:750}
-    .faq p{margin:10px 0 0;color:var(--muted);line-height:1.65}
-    footer{padding:26px 0 40px;color:var(--muted);font-size:13px}
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Water Leak Detection Bay Area | High Water Bill, Leak Notice &amp; Slab Leak Help</title>
+  <meta name="description" content="Same-day water leak detection in the Bay Area. We help with high water bills, leak notices, hidden pipe leaks, slab leaks, moisture inspection, and documentation for property managers and insurance claims." />
+  <link rel="preconnect" href="https://unpkg.com" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Bay Area Leak Detection",
+    "telephone": "+16693224333",
+    "areaServed": [
+      "San Jose, CA",
+      "Santa Clara, CA",
+      "Sunnyvale, CA",
+      "Mountain View, CA",
+      "Palo Alto, CA",
+      "Milpitas, CA",
+      "Cupertino, CA",
+      "San Francisco Bay Area, CA"
+    ],
+    "serviceType": "Water leak detection, non-invasive leak detection, thermal imaging leak detection, acoustic leak detection, high water bill inspection, slab leak detection, moisture inspection"
+  }
+  </script>
 </head>
 <body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Bay Area Leak Detection home">
+      <span class="brand-mark" aria-hidden="true">
+        <span class="drop"></span>
+      </span>
+      <span class="brand-text">
+        <strong>Bay Area</strong>
+        <span>Leak Detection</span>
+      </span>
+    </a>
 
-<header>
-  <div class="wrap topbar">
-    <div class="brand">
-      <div class="logo" aria-hidden="true"></div>
-      <div>Bay Area Leak Detection</div>
-    </div>
-    <nav>
+    <nav class="main-nav" aria-label="Main navigation">
       <a href="#services">Services</a>
+      <a href="#process">How It Works</a>
+      <a href="#about">About Us</a>
       <a href="#pricing">Pricing</a>
-      <a href="#areas">Service Area</a>
       <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
+      <a href="#area">Service Area</a>
     </nav>
-    <a class="btn primary" href="#contact">Book</a>
-  </div>
-</header>
 
-<main class="wrap">
-  <section class="hero">
-    <div class="grid">
-      <div>
-        <h1>Water Leak Detection & Moisture Inspection</h1>
-        <p class="sub">
-          Serving the <b>San Francisco Bay Area</b>. We provide moisture readings, photo documentation,
-          and a clear summary to help identify likely leak sources and next steps.
-        </p>
+    <div class="header-actions">
+      <a class="phone-link call-btn" href="tel:+16693224333">
+        <i data-lucide="phone"></i>
+        <span>(669) 322-4333</span>
+      </a>
+      <a class="btn btn-green call-btn" href="tel:+16693224333">Call Now &ndash; Get Answers Fast</a>
+      <a class="btn btn-header-secondary" href="#callback">Request Callback</a>
+    </div>
+  </header>
 
-        <div class="actions">
-          <a class="btn primary" href="tel:+12028701283">Call (202) 870-1283</a>
-          <a class="btn" href="sms:12028701283?&body=Hi!%20I%20need%20leak%20detection%20in%20the%20Bay%20Area.%20My%20address%20is%3A%20">Text (SMS)</a>
+  <main id="top">
+    <section class="hero-section">
+      <div class="hero-copy">
+        <h1>High Water Bill? Hidden Leak? We Find It Fast.</h1>
+        <p class="availability-line">Same-Day &amp; Emergency Leak Detection Available</p>
+        <p class="promo-line">Limited-Time Special: Leak Detection Only $79 <span>Standard price $250</span></p>
+        <p class="today-line">We can be there today.</p>
+        <p class="lead">Same-day, non-invasive leak detection in the Bay Area. We help homeowners, property managers, HOA, and commercial buildings find leaks before they become expensive water damage.</p>
+        <p class="local-service-line">Serving San Jose, Santa Clara, Sunnyvale, Mountain View, Palo Alto, Milpitas, Cupertino, and nearby Bay Area cities.</p>
+        <p class="specialty-line">We specialize in high water bill and leak notice investigations.</p>
+        <p class="hero-alert">Received a leak notice or unusually high water bill? Call us today.</p>
+
+        <ul class="check-list">
+          <li><i data-lucide="check"></i>Same-day availability</li>
+          <li><i data-lucide="check"></i>Insured professionals</li>
+          <li><i data-lucide="check"></i>500+ inspections completed</li>
+          <li><i data-lucide="check"></i>Thermal imaging &amp; acoustic leak detection</li>
+        </ul>
+
+        <div class="hero-buttons">
+          <a class="btn btn-green btn-large call-btn" href="tel:+16693224333">
+            <i data-lucide="phone"></i>
+            Call Now &ndash; Get Answers Fast
+          </a>
+          <a class="btn btn-outline btn-large" href="#callback">Request Callback</a>
         </div>
+        <p class="hero-cta-note">Available 7 days a week. Fast response.</p>
 
-        <div class="pillrow">
-          <span class="pill">Moisture readings</span>
-          <span class="pill">Photo documentation</span>
-          <span class="pill">Fast scheduling</span>
-          <span class="pill">Bay Area</span>
-        </div>
-
-        <div class="kpis">
-          <div class="card kpi">
-            <b>Same-day / Next-day</b>
-            <span>When available. Quick call/text to confirm.</span>
+        <div class="rating-row" aria-label="4.9 Google rating based on 100 plus reviews">
+          <div class="avatar-stack" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
           </div>
-          <div class="card kpi">
-            <b>Clear documentation</b>
-            <span>Readings + photos + notes for landlord/insurance.</span>
-          </div>
-          <div class="card kpi">
-            <b>Practical next steps</b>
-            <span>Repair vs dry-out vs further testing guidance.</span>
+          <div>
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733; <span>4.9 Google Rating</span></div>
+            <p>Based on 100+ reviews</p>
+            <p class="rating-proof">Trusted by Bay Area homeowners and property managers.</p>
           </div>
         </div>
       </div>
 
-      <div class="card" id="contact">
-        <h2 style="margin:0 0 8px">Quick Request</h2>
-        <p class="muted">Fill out the form → it opens an email draft to send.</p>
+      <div class="hero-media" aria-hidden="true">
+        <img src="assets/hero-inspection.jpg" alt="" />
+      </div>
 
-        <form id="quickForm">
-          <div class="row2">
-            <div>
-              <label>Name</label>
-              <input name="name" placeholder="Alex" required />
-            </div>
-            <div>
-              <label>Your phone</label>
-              <input name="phone" placeholder="(###) ###-####" required />
-            </div>
-          </div>
-
-          <label>Property address (city is OK)</label>
-          <input name="address" placeholder="Santa Clara, CA" required />
-
-          <label>What’s going on?</label>
-          <textarea name="details" placeholder="Wet spot, ceiling stain, odor, mold concern, high water bill, etc."></textarea>
-
-          <button class="btn primary" style="width:100%;margin-top:10px" type="submit">Send Request</button>
-
-          <div class="divider"></div>
-          <div class="small">
-              Email goes to: <b>luchnik.al@mail.ru</b><br/>
-              Or call/text: <b>(202) 870-1283</b>
-          </div>
+      <aside class="callback-card" id="callback" aria-labelledby="callback-title">
+        <h2 id="callback-title">Schedule Same-Day Leak Detection</h2>
+        <p>We respond quickly and will help you schedule your inspection.</p>
+        <p class="form-trust">Limited-time special: leak detection only $79. Standard price is $250. Final price may depend on complexity and location.</p>
+        <p class="response-proof">We typically respond within 15&ndash;30 minutes.</p>
+        <form id="callbackForm">
+          <label>
+            <span>Full Name</span>
+            <i data-lucide="user"></i>
+            <input name="name" autocomplete="name" placeholder="Full Name" required />
+          </label>
+          <label>
+            <span>Phone Number</span>
+            <i data-lucide="phone"></i>
+            <input name="phone" autocomplete="tel" placeholder="Phone Number" required />
+          </label>
+          <label>
+            <span>City</span>
+            <i data-lucide="map-pin"></i>
+            <input name="city" autocomplete="address-level2" placeholder="City" required />
+          </label>
+          <fieldset class="contact-method">
+            <legend>How should we contact you?</legend>
+            <label>
+              <input type="radio" name="contactMethod" value="Phone call" checked />
+              <span><i data-lucide="phone"></i>Call</span>
+            </label>
+            <label>
+              <input type="radio" name="contactMethod" value="Text message" />
+              <span><i data-lucide="message-square"></i>Message</span>
+            </label>
+          </fieldset>
+          <button class="btn btn-green btn-submit" type="submit">Request Callback</button>
+          <p class="form-status" id="formStatus" aria-live="polite"></p>
         </form>
-      </div>
-    </div>
-  </section>
+        <p class="privacy-note"><i data-lucide="lock"></i>No spam. We'll call or text you shortly.</p>
+        <p class="form-badge">No pressure. No hidden fees. Clear answers.</p>
+      </aside>
+    </section>
 
-  <section id="services">
-    <h2>Services</h2>
-    <p class="muted">Common leak and moisture inspection requests we handle:</p>
-
-    <div class="services">
-      <div class="card svc">
-        <h3>Leak Source Investigation</h3>
-        <p>Kitchen/bath, fixtures, supply & drain lines, windows, roof intrusion, HVAC condensate, and more.</p>
+    <section class="intent-section">
+      <div class="section-inner">
+        <h2>When To Call Us</h2>
+        <p class="section-proof">Most of our calls come after a sudden high water bill or visible water damage.</p>
+        <div class="intent-grid">
+          <article><i data-lucide="receipt-text"></i><span>High water bill</span></article>
+          <article><i data-lucide="mail-warning"></i><span>Leak notice from water company</span></article>
+          <article><i data-lucide="waves"></i><span>Wet walls, ceiling, or flooring</span></article>
+          <article><i data-lucide="cloud-fog"></i><span>Musty smell or moisture</span></article>
+          <article><i data-lucide="circle-help"></i><span>Unknown water source</span></article>
+          <article><i data-lucide="home"></i><span>Suspected slab leak</span></article>
+        </div>
       </div>
-      <div class="card svc">
-        <h3>Moisture Mapping</h3>
-        <p>Moisture readings and affected-area mapping to understand spread and severity.</p>
-      </div>
-      <div class="card svc">
-        <h3>Documentation & Report</h3>
-        <p>Photos + readings + a simple summary for landlords, property managers, or insurance documentation.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="pricing">
-    <div class="two">
-      <div class="card">
-        <h2>Pricing (example)</h2>
-        <p class="muted">
-          Inspection + moisture readings + documentation: <b>$250</b>.<br/>
-          If we perform the dry-out / remediation work, the inspection fee can be credited toward the project.
-        </p>
-        <div class="divider"></div>
-        <p class="small">You can change this anytime (starting at $___, travel fee, etc.).</p>
+    <section class="work-with-section">
+      <div class="section-inner">
+        <h2>We Work With</h2>
+        <div class="work-card-grid">
+          <article><i data-lucide="house"></i><h3>Homeowners</h3></article>
+          <article><i data-lucide="building-2"></i><h3>Property Managers</h3></article>
+          <article><i data-lucide="users"></i><h3>HOA Communities</h3></article>
+          <article><i data-lucide="factory"></i><h3>Commercial Buildings</h3></article>
+          <article><i data-lucide="file-check-2"></i><h3>Insurance / Claim Documentation</h3></article>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h2>What you get</h2>
-        <p class="muted" style="margin-bottom:10px">
-          • Moisture readings (walls/floors/ceilings)<br/>
-          • Photos & notes<br/>
-          • Clear summary + recommendations
-        </p>
-        <a class="btn primary" href="#contact">Send a Request</a>
+    <section class="trust-strip" aria-label="Company highlights">
+      <article>
+        <i data-lucide="shield-check"></i>
+        <div>
+          <h3>Insured Professionals</h3>
+          <p>Careful inspections by trained professionals you can trust.</p>
+        </div>
+      </article>
+      <article>
+        <i data-lucide="badge-check"></i>
+        <div>
+          <h3>500+ Inspections</h3>
+          <p>Hundreds of happy homeowners across the Bay Area.</p>
+        </div>
+      </article>
+      <article>
+        <span class="google-mark">G</span>
+        <div>
+          <h3>4.9 Google Rating</h3>
+          <p>Based on 100+ reviews from local customers.</p>
+        </div>
+      </article>
+      <article>
+        <i data-lucide="clock"></i>
+        <div>
+          <h3>Fast Response</h3>
+          <p>We call back within 10 minutes.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="services-section" id="services">
+      <div class="section-inner">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+          <article class="service-card">
+            <img src="assets/service-leak.jpg" alt="Thermal leak detection equipment near a wall" />
+            <div class="service-icon"><i data-lucide="droplets"></i></div>
+            <h3>Leak Detection</h3>
+            <p>Water leak detection Bay Area service for hidden pipe leaks in walls, ceilings, floors, and fixtures.</p>
+          </article>
+          <article class="service-card">
+            <img src="assets/service-moisture.jpg" alt="Moisture meter reading on a wall" />
+            <div class="service-icon"><i data-lucide="gauge"></i></div>
+            <h3>Moisture Inspection</h3>
+            <p>Moisture inspection and high water bill leak inspection with accurate readings and clear findings.</p>
+          </article>
+          <article class="service-card">
+            <img src="assets/service-report.jpg" alt="Inspection report being completed" />
+            <div class="service-icon"><i data-lucide="clipboard-list"></i></div>
+            <h3>Documentation &amp; Report</h3>
+            <p>Leak notice help, property manager leak detection, and written reports for your records or claim.</p>
+          </article>
+          <article class="service-card">
+            <img src="assets/technician.jpg" alt="Technician using leak detection equipment near flooring" />
+            <div class="service-icon"><i data-lucide="scan-search"></i></div>
+            <h3>Slab Leak Detection</h3>
+            <p>Non-invasive slab leak detection for suspected underground or foundation-area plumbing leaks.</p>
+          </article>
+        </div>
+        <div class="services-support">
+          <p>We specialize in locating leaks before repair work begins. Find the leak before you break walls or spend thousands on unnecessary repairs.</p>
+          <p>Our water leak detection Bay Area team helps with high water bill inspection, slab leak detection, moisture inspection, and documentation for residential, HOA, commercial, and property manager leak detection needs.</p>
+          <a class="btn btn-green btn-large" href="#callback">Book Leak Inspection Today</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="areas">
-    <div class="card">
-      <h2>Service Area</h2>
-      <p class="muted">
-        San Francisco Bay Area — including <b>Santa Clara</b>, <b>San Jose</b>, <b>Sunnyvale</b>, <b>Mountain View</b>,
-        <b>Cupertino</b>, <b>Milpitas</b>, <b>Palo Alto</b>, and nearby cities.
-      </p>
-    </div>
-  </section>
-
-  <section>
-    <div class="two">
-      <div class="card">
-        <h2>Reviews</h2>
-        <p class="muted">
-          “Quick response, clear report and photos.”<br/>
-          “Found the likely source fast and explained next steps.”<br/>
-          “Professional moisture readings and documentation.”
-        </p>
-        <div class="divider"></div>
-        <p class="small">Later you can replace these with real Google/Yelp reviews.</p>
+    <section class="technology-section">
+      <div class="section-inner">
+        <h2>How We Find Hidden Leaks</h2>
+        <p class="technology-intro">We use advanced, non-invasive technology to locate leaks quickly and accurately without unnecessary damage to your property.</p>
+        <div class="technology-grid">
+          <article>
+            <i data-lucide="thermometer-sun"></i>
+            <h3>Thermal Imaging</h3>
+            <p>Thermal cameras detect temperature differences behind walls and floors to identify hidden moisture.</p>
+          </article>
+          <article>
+            <i data-lucide="audio-lines"></i>
+            <h3>Acoustic Leak Detection</h3>
+            <p>Sensitive acoustic equipment helps us hear leaks inside pipes, even when they are underground or behind walls.</p>
+          </article>
+          <article>
+            <i data-lucide="droplets"></i>
+            <h3>Moisture Detection</h3>
+            <p>Professional moisture meters confirm the presence and spread of water damage.</p>
+          </article>
+        </div>
+        <p class="technology-final">This allows us to pinpoint the leak source without guesswork or unnecessary demolition.</p>
+        <p class="technology-seo">Our non-invasive leak detection process combines thermal imaging leak detection, acoustic leak detection, and moisture readings to help property owners get clear answers before repairs begin.</p>
       </div>
+    </section>
 
-      <div class="card faq" id="faq">
+    <section class="documentation-section">
+      <div class="section-inner doc-panel">
+        <i data-lucide="file-check-2"></i>
+        <div>
+          <h2>Claim Documentation Included</h2>
+          <p>We provide photos, moisture readings, and a written leak detection report for your records, property manager, or insurance claim.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="urgency-section">
+      <div class="section-inner urgency-panel">
+        <i data-lucide="triangle-alert"></i>
+        <div>
+          <h2>Hidden Leaks Can Cost Thousands</h2>
+          <p>Hidden leaks can waste hundreds of gallons per day, increase your water bill, damage drywall, flooring, cabinets, and create mold risk. Early detection can save thousands.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-section" id="process">
+      <div class="section-inner">
+        <h2>How It Works</h2>
+        <div class="process-grid">
+          <article>
+            <span><i data-lucide="phone"></i></span>
+            <div>
+              <h3>1. Contact Us</h3>
+              <p>Call now or request a callback. We respond within minutes.</p>
+            </div>
+          </article>
+          <article>
+            <span><i data-lucide="home"></i></span>
+            <div>
+              <h3>2. We Inspect</h3>
+              <p>We perform slab leak detection, moisture inspection, and source tracing with advanced equipment.</p>
+            </div>
+          </article>
+          <article>
+            <span><i data-lucide="file-text"></i></span>
+            <div>
+              <h3>3. You Get Answers</h3>
+              <p>You receive clear results, photos, readings, and recommendations.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="section-inner split-layout">
+        <img class="about-photo" src="assets/technician.jpg" alt="Technician checking moisture readings near a wall" />
+
+        <article class="quiet-panel">
+          <h2>Why Homeowners Choose Us</h2>
+          <ul class="check-list compact">
+            <li><i data-lucide="check"></i>Non-invasive inspection</li>
+            <li><i data-lucide="check"></i>Honest, upfront pricing</li>
+            <li><i data-lucide="check"></i>Clear communication</li>
+            <li><i data-lucide="check"></i>Leak notice help for Bay Area properties</li>
+            <li><i data-lucide="check"></i>No guesswork. We pinpoint the exact leak source.</li>
+            <li><i data-lucide="check"></i>We use professional-grade detection tools used in insurance and restoration cases.</li>
+          </ul>
+        </article>
+
+        <article class="quiet-panel reviews-panel">
+          <h2>What Our Clients Say</h2>
+          <div class="review-grid">
+            <blockquote>
+              <div>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p>&quot;Found the leak in 20 minutes. Saved me thousands of dollars in damage.&quot;</p>
+              <footer>- Michael R.<br><span>San Jose, CA</span></footer>
+            </blockquote>
+            <blockquote>
+              <div>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p>&quot;Professional, on time, and the report was perfect for our insurance claim.&quot;</p>
+              <footer>- Anna L.<br><span>Santa Clara, CA</span></footer>
+            </blockquote>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="pricing-section" id="pricing">
+      <div class="section-inner price-band">
+        <div class="price-icon"><i data-lucide="badge-dollar-sign"></i></div>
+        <div>
+          <span>Limited-Time Special</span>
+          <strong>$79</strong>
+        </div>
+        <ul class="check-list compact">
+          <li><i data-lucide="check"></i>Moisture readings</li>
+          <li><i data-lucide="check"></i>Leak source detection</li>
+          <li><i data-lucide="check"></i>Photo documentation</li>
+          <li><i data-lucide="check"></i>Clear recommendations</li>
+        </ul>
+        <p>Leak detection special is only $79. Standard price is $250. Final price may depend on complexity and location.</p>
+      </div>
+    </section>
+
+    <section class="mini-faq-section">
+      <div class="section-inner mini-faq-card">
+        <h2>How fast can you come?</h2>
+        <p>Same-day service available in most Bay Area locations.</p>
+      </div>
+    </section>
+
+    <section class="pre-faq-cta">
+      <div class="section-inner cta-panel">
+        <div>
+          <h2>Don't Wait Until It Gets Worse</h2>
+          <p>Most leaks start small and become expensive fast. Call now and get clear answers today.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-green btn-large call-btn" href="tel:+16693224333">
+            <i data-lucide="phone"></i>
+            Call Now &ndash; Get Answers Fast
+          </a>
+          <a class="btn btn-outline btn-large" href="#callback">Request Callback</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="section-inner">
         <h2>FAQ</h2>
-
-        <details>
-          <summary>Do you repair plumbing leaks?</summary>
-          <p>We focus on leak detection and moisture documentation. If needed, we can recommend next steps (repair vs dry-out).</p>
-        </details>
-
-        <details>
-          <summary>Can I use this for my landlord or insurance?</summary>
-          <p>Yes. We provide moisture readings and photo documentation with a clear summary.</p>
-        </details>
-
-        <details>
-          <summary>How fast can you come out?</summary>
-          <p>Often same-day or next-day depending on schedule and location. Call/text for availability.</p>
-        </details>
+        <div class="faq-list">
+          <details>
+            <summary>How soon can you inspect my property?</summary>
+            <p>We often have same-day or next-day availability. Submit a request and we will call or text quickly.</p>
+          </details>
+          <details>
+            <summary>Can you help with a high water bill or leak notice?</summary>
+            <p>Yes. We provide high water bill leak inspection and leak notice help for homeowners, HOA communities, property managers, and commercial buildings.</p>
+          </details>
+          <details>
+            <summary>Do I need a plumber or leak detection first?</summary>
+            <p>If you don't know where the water is coming from, leak detection should usually come first. We help identify the source before walls, floors, or plumbing are opened.</p>
+          </details>
+          <details>
+            <summary>Can a hidden leak cause a high water bill?</summary>
+            <p>Yes. Hidden plumbing, irrigation, toilet, or slab leaks can increase your water bill quickly. We inspect and help document the source.</p>
+          </details>
+          <details>
+            <summary>Do you offer Slab Leak Detection?</summary>
+            <p>Yes. We provide slab leak detection for suspected under-floor, foundation-area, and hidden pipe leaks across nearby Bay Area cities.</p>
+          </details>
+          <details>
+            <summary>How do you find leaks without opening walls?</summary>
+            <p>We use thermal imaging, acoustic leak detection, and moisture sensors to locate leaks accurately without unnecessary damage.</p>
+          </details>
+          <details>
+            <summary>Do you provide documentation?</summary>
+            <p>Yes. We provide photos, moisture readings, and a written leak detection report for your records, property manager, or insurance claim.</p>
+          </details>
+          <details>
+            <summary>What areas do you serve?</summary>
+            <p>We serve San Jose, Santa Clara, Sunnyvale, Mountain View, Cupertino, Palo Alto, Milpitas, and nearby Bay Area cities.</p>
+          </details>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>© <span id="year"></span> Bay Area Leak Detection · (202) 870-1283</footer>
-</main>
+    <section class="footer-urgency">
+      <div class="section-inner footer-urgency-panel">
+        <p>Leaks don't fix themselves. Call now.</p>
+        <a class="btn btn-green call-btn" href="tel:+16693224333">Call Now &ndash; Get Answers Fast</a>
+      </div>
+    </section>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+    <section class="bottom-cta" id="area">
+      <div class="section-inner footer-grid">
+        <div>
+          <h2>Need Help With a Leak Right Now?</h2>
+          <p>Leaks don't fix themselves. Call now.</p>
+        </div>
+        <a class="btn btn-green btn-large call-btn" href="tel:+16693224333">
+          <i data-lucide="phone"></i>
+          Call Now &ndash; Get Answers Fast
+        </a>
+        <a class="btn btn-dark btn-large" href="#callback">Request Callback</a>
+        <div class="service-area">
+          <i data-lucide="map-pin"></i>
+          <span>Proudly serving the Bay Area</span>
+          <small>San Jose &middot; Santa Clara &middot; Sunnyvale &middot; Mountain View &middot; Cupertino &middot; Palo Alto &middot; Milpitas &middot; and nearby cities</small>
+        </div>
+        <p class="footer-cities">Local leak detection in San Jose, Santa Clara, Sunnyvale, Mountain View, Palo Alto, Milpitas, Cupertino, Campbell, Los Gatos, and nearby Bay Area communities.</p>
+        <p class="footer-disclaimer">Leak detection and inspection services only. Plumbing repair, construction, or restoration work may be performed by licensed contractors where required.</p>
+      </div>
+    </section>
+  </main>
 
-  // Quick Request -> opens email draft
-  document.getElementById("quickForm").addEventListener("submit", (e) => {
-    e.preventDefault();
-    const fd = new FormData(e.target);
+  <nav class="mobile-sticky-cta" aria-label="Mobile quick actions">
+    <a class="btn btn-green call-btn" href="tel:+16693224333"><i data-lucide="phone"></i>Call Now &ndash; Get Answers Fast</a>
+    <a class="btn btn-dark" href="#callback">Request Callback</a>
+  </nav>
 
-    const name = (fd.get("name") || "").toString().trim();
-    const phone = (fd.get("phone") || "").toString().trim();
-    const address = (fd.get("address") || "").toString().trim();
-    const details = (fd.get("details") || "").toString().trim();
-
-    const subject = encodeURIComponent("Leak Detection Request — " + address);
-    const body = encodeURIComponent(
-`Name: ${name}
-Phone: ${phone}
-Address: ${address}
-
-Details:
-${details || "-"}
-`
-    );
-
-    const mailto = "mailto:luchnik.al@mail.ru?subject=" + subject + "&body=" + body;
-    window.location.href = mailto;
-  });
-</script>
-
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
-
