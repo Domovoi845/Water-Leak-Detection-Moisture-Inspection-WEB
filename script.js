@@ -19,7 +19,7 @@ form.addEventListener("submit", async (event) => {
   form.querySelector("button[type='submit']").disabled = true;
 
   try {
-    const response = await fetch("/.netlify/functions/send-telegram", {
+   const response = await fetch("https://bay-area-leak-inspection.netlify.app/.netlify/functions/send-telegram", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, phone, city, contactMethod }),
